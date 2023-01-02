@@ -1,0 +1,58 @@
+<section class="section-example">
+  <app-viewer title="Mediano">
+    <o-card-container-horizontal
+      component
+      title="Título de tarjeta"
+      text="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
+      img="https://gcba.github.io/Obelisco/cards/paseobajo-wide.png"
+      route="/components"
+    >
+    </o-card-container-horizontal>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ cardMedium }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Grande">
+    <o-card-container-horizontal
+      component
+      title="Título de tarjeta"
+      text="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
+      img="https://gcba.github.io/Obelisco/cards/paseobajo-wide.png"
+      route="/components"
+      [isBig]="true"
+    >
+    </o-card-container-horizontal>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ cardBig }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con icono">
+    <o-card-container-horizontal component title="Título del acceso" text="Descripción del acceso" route="/components">
+      <i icon class="bx bx-file card-icon-left"></i>
+    </o-card-container-horizontal>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ cardIcon }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con icono y sin borde">
+    <o-card-container-horizontal
+      component
+      title="Título del acceso"
+      text="Descripción del acceso"
+      [isUnbordered]="true"
+      route="/components"
+    >
+      <i icon class="bx bx-file card-icon-left"></i>
+    </o-card-container-horizontal>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ cardIconUnbordered }}</code>
+    </pre>
+  </app-viewer>
+</section>

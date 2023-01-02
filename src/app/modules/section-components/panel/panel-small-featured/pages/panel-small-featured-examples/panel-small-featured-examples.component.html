@@ -1,0 +1,35 @@
+<section class="section-example">
+  <app-viewer title="Panel Destacado Chico con Botones">
+    <div component class="col-5">
+      <o-small-featured-panel
+        title="Título de tarjeta"
+        description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
+        image="https://raw.githubusercontent.com/gcba/Obelisco/master/static/cards/paseobajo-wide.png"
+      >
+        <button type="button" class="btn btn-secondary btn-sm card-link">Acción 1</button>
+        <button type="button" class="btn btn-link btn-sm card-link">Acción 2</button>
+      </o-small-featured-panel>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{examplePanelSmallWithButtonslHTML}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Panel Destacado Chico con Enlace">
+    <div component class="col-5">
+      <o-small-featured-panel
+        component
+        title="Título de tarjeta"
+        description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
+        image="https://raw.githubusercontent.com/gcba/Obelisco/master/static/cards/paseobajo-wide.png"
+      >
+        <a class="" href="#" target="_blank" rel="noreferrer">Enlace</a>
+      </o-small-featured-panel>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{examplePanelSmallWithLinkslHTM}}</code>
+    </pre>
+  </app-viewer>
+</section>

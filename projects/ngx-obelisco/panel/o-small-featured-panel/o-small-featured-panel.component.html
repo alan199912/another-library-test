@@ -1,0 +1,10 @@
+<div class="card card-simple panel-sm">
+  <img oDefaultImage *ngIf="image" [src]="image" class="rounded-lg mb-4" width="154" height="154" [alt]="title" />
+  <div class="card-body">
+    <h3 class="card-title">{{ title }}</h3>
+    <p class="card-text" *ngIf="description">{{ description }}</p>
+  </div>
+  <div class="panel-footer">
+    <ng-content></ng-content>
+  </div>
+</div>

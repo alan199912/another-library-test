@@ -1,0 +1,54 @@
+<section class="section-example">
+  <app-viewer title="Pasos de un formulario con botones y directiva" [isNavCode]="true" id="example-directive">
+    <div component>
+      <o-steps-form [steps]="['Paso 1', 'Paso 2', 'Paso 3']" (stopSteps)="stopProgress($event)"></o-steps-form>
+      <br />
+      <button class="btn btn-sm btn-link mr-2" (click)="previousStep()">Anterior</button>
+      <button class="btn btn-sm btn-link" (click)="nextStep()">Siguiente</button>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exmapleDirectiveHTML }}
+      </code>
+    </pre>
+
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>
+        {{ exmapleDirectiveTS }}
+      </code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Pasos de un formulario con botones y funcionalidad" [isNavCode]="true" id="example-functionality">
+    <div component>
+      <div class="stepper">
+        <p class="step-title">{{ actualStep.name }}</p>
+        <p class="step-next" *ngIf="!isLastStep; else lastStep">Paso siguiente: {{ nextStepName }}</p>
+        <ng-template #lastStep><p class="step-next">Ultimo paso</p></ng-template>
+
+        <div class="steps">
+          <div class="step" [class.active]="step.active" *ngFor="let step of stepsForm"></div>
+        </div>
+        <span class="step-text">Paso {{ currentStepNumber }} de {{ stepsForm.length }}</span>
+      </div>
+      <br />
+      <button class="btn btn-sm btn-link mr-2" (click)="previousStepExample()">Anterior</button>
+      <button class="btn btn-sm btn-link" (click)="nextStepExample()">Siguiente</button>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exmapleFunctionalityHTML }}
+      </code>
+    </pre>
+
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>
+        {{ exmapleFunctionalityTS }}
+      </code>
+    </pre>
+  </app-viewer>
+</section>

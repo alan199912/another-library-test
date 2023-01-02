@@ -1,0 +1,22 @@
+<table
+  *ngIf="isValidateComponent"
+  class="table"
+  [ngClass]="{ 'table-bordered': isBordered, 'table-striped': isStriped, 'table-hover': isHover }"
+>
+  <thead>
+    <tr>
+      <th scope="col" *ngIf="isSelectable">
+        <input type="checkbox" aria-label="checkbox" (change)="allSelected($event.target)" />
+      </th>
+      <th scope="col" *ngFor="let column of displayedColumns">{{ column.value }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of dataSource">
+      <td *ngIf="isSelectable">
+        <input #checkbox type="checkbox" aria-label="checkbox" (change)="selectedRow($event.target)" />
+      </td>
+      <td *ngFor="let column of displayedColumns" [innerHTML]="data[column.key]"></td>
+    </tr>
+  </tbody>
+</table>

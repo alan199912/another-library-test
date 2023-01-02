@@ -1,0 +1,50 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2>Referencia de API para el componente Navegacion vertical de Obelisco</h2>
+    <pre class="code import">
+        <code appPrism code="import { ONavModule } from '@alan199912/library-test/nav';"></code>
+      </pre>
+  </div>
+
+  <h3>Etiqueta</h3>
+  <hr />
+
+  <div class="section-selector">
+    <h4>ONavVertical</h4>
+    <p>Selector: <strong>o-nav-vertical</strong></p>
+
+    <div class="section-properties">
+      <h5>Propiedades</h5>
+
+      <o-table
+        [displayedColumns]="columns"
+        [dataSource]="dataSourceNavigationVertical"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+  </div>
+
+  <h3>Tipos de datos</h3>
+  <hr />
+
+  <div class="section-type">
+    <h4>NavVerticalItems</h4>
+    <p>Permite establecer los valores de la propiedad <strong>NavItems</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ exampleIterface }}</code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [dataSource]="dataSourceInterface"
+          [displayedColumns]="columns"
+          [isBordered]="true"
+          [isStriped]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+</section>

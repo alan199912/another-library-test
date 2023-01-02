@@ -1,0 +1,42 @@
+:host {
+  .section-components {
+    display: flex;
+
+    .sidebar {
+      width: 300px;
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-right: 1px solid #e5e5e5;
+      height: fit-content;
+      border-radius: 0.5rem;
+    }
+
+    .component-description-content {
+      flex: 1;
+      padding: 20px;
+
+      .title-component {
+        position: fixed;
+        background-color: #fff;
+        width: 100%;
+        padding: 20px 20px 0 20px;
+        z-index: 3;
+
+        &.scroll {
+          top: 0;
+        }
+
+        &.no-scroll {
+          position: initial;
+        }
+      }
+    }
+
+    .card-deck {
+      > * {
+        margin: 15px;
+        width: 340px;
+      }
+    }
+  }
+}

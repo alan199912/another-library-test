@@ -1,0 +1,96 @@
+<section class="section-example">
+  <app-viewer title="Simple" [isNavCode]="true">
+    <o-nav-vertical component [navItems]="navigationSimpleComponent"></o-nav-vertical>
+    <pre appClipboard component-html class="code">
+          <button class="btn btn-clipboard">Copiar</button>
+          <code appPrism language="html">
+            {{ simpleHTML }}
+          </code>
+        </pre>
+    <pre appClipboard component-ts class="code">
+          <button class="btn btn-clipboard">Copiar</button>
+          <code appPrism>
+            {{ exampleTs }}
+          </code>
+        </pre>
+  </app-viewer>
+
+  <app-viewer title="Simple con icono" [isNavCode]="true">
+    <o-nav-vertical component [navItems]="navigationSimpleIconComponent"></o-nav-vertical>
+    <pre appClipboard component-html class="code">
+          <button class="btn btn-clipboard">Copiar</button>
+          <code appPrism language="html">
+            {{ simpleHTML }}
+          </code>
+        </pre>
+    <pre appClipboard component-ts class="code">
+          <button class="btn btn-clipboard">Copiar</button>
+          <code appPrism>
+            {{ exampleTsIcon }}
+          </code>
+        </pre>
+  </app-viewer>
+
+  <app-viewer title="Con dos niveles" [isNavCode]="true">
+    <o-nav-vertical component [navItems]="levelTwoComponent"></o-nav-vertical>
+    <pre appClipboard component-html class="code">
+          <button class="btn btn-clipboard">Copiar</button>
+          <code appPrism language="html">
+            {{ simpleHTML }}
+          </code>
+        </pre>
+    <pre appClipboard component-ts class="code">
+          <button class="btn btn-clipboard">Copiar</button>
+          <code appPrism language="javascript">
+            {{ exampleTsTwo }}
+          </code>
+        </pre>
+  </app-viewer>
+
+  <app-viewer title="Con dos niveles e icono" [isNavCode]="true">
+    <o-nav-vertical component [navItems]="levelTwoIconComponent"></o-nav-vertical>
+    <pre appClipboard component-html class="code">
+          <button class="btn btn-clipboard">Copiar</button>
+          <code appPrism language="html">
+            {{ simpleHTML }}
+          </code>
+        </pre>
+    <pre appClipboard component-ts class="code">
+          <button class="btn btn-clipboard">Copiar</button>
+          <code appPrism language="javascript">
+            {{ exampleTsTwoIcon }}
+          </code>
+        </pre>
+  </app-viewer>
+
+  <app-viewer title="Con tres niveles" [isNavCode]="true">
+    <o-nav-vertical component [navItems]="levelThreeComponent"></o-nav-vertical>
+    <pre appClipboard component-html class="code">
+          <button class="btn btn-clipboard">Copiar</button>
+          <code appPrism language="html">
+            {{ simpleHTML }}
+          </code>
+        </pre>
+    <pre appClipboard component-ts class="code">
+          <button class="btn btn-clipboard">Copiar</button>
+          <code appPrism language="javascript">
+            {{ exampleTsThree }}
+          </code>
+        </pre>
+  </app-viewer>
+  <app-viewer title="Con tres niveles e icono" [isNavCode]="true">
+    <o-nav-vertical component [navItems]="levelThreeIconComponent"></o-nav-vertical>
+    <pre appClipboard component-html class="code">
+          <button class="btn btn-clipboard">Copiar</button>
+          <code appPrism language="html">
+            {{ simpleHTML }}
+          </code>
+        </pre>
+    <pre appClipboard component-ts class="code">
+          <button class="btn btn-clipboard">Copiar</button>
+          <code appPrism language="javascript">
+            {{ exampleTsThreeIcon}}
+          </code>
+        </pre>
+  </app-viewer>
+</section>

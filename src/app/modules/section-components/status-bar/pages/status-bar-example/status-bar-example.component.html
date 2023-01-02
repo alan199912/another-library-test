@@ -1,0 +1,39 @@
+<section class="section-example">
+  <app-viewer title="Con botones y directiva" [isNavCode]="true" id="example-directive">
+    <div component>
+      <o-status-bar [steps]="steps"></o-status-bar>
+      <br />
+      <button oStepPrevious class="btn btn-link btn-sm">Anterior</button>
+      <button oStepNext class="btn btn-link btn-sm">Siguiente</button>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exampleDirectiveHTML }}
+      </code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism >
+        {{ exampleDirectiveTS }}
+      </code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con botones y funcionalidad" [isNavCode]="true" id="example-functionality">
+    <app-status-bar-demo component></app-status-bar-demo>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exampleFuncionalityHTML }}
+      </code>
+    </pre>
+
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>
+        {{ exampleFuncionalityTS }}
+      </code>
+    </pre>
+  </app-viewer>
+</section>

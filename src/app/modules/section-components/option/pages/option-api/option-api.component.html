@@ -1,0 +1,74 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2>Referencia de API para el componente Opción de Obelisco</h2>
+    <pre class="code import">
+      <code appPrism language="javascript" code="import { OOptionComponent } from '@alan199912/library-test/option';"></code>
+    </pre>
+  </div>
+
+  <h3>Etiqueta</h3>
+  <hr />
+
+  <div class="section-selector">
+    <h4>OOption</h4>
+    <p>Selector: <strong>o-option</strong></p>
+
+    <div class="section-properties">
+      <h5>Propiedades</h5>
+
+      <o-table
+        [displayedColumns]="columnsOption"
+        [dataSource]="dataSourceOption"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+
+    <div class="section-properties">
+      <h5>Métodos</h5>
+
+      <o-table
+        [displayedColumns]="columnsOption"
+        [dataSource]="dataSourceMethodsOption"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+  </div>
+
+  <h3>Tipos de datos</h3>
+  <hr />
+
+  <div class="section-type">
+    <h4>Option</h4>
+    <p>Permite establecer los valores de la propiedad <strong>option</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ optionInterface }}</code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [dataSource]="dataSourceOptionInterface"
+          [displayedColumns]="columnsOption"
+          [isBordered]="true"
+          [isStriped]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="section-type">
+    <h4>Sizes</h4>
+    <p>Permite establecer el tamaño del componente <strong>OOptionComponent</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ sizes }}</code>
+      </pre>
+    </div>
+  </div>
+</section>

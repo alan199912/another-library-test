@@ -1,0 +1,20 @@
+<a #card class="card" [routerLink]="route">
+  <img oDefaultImage [src]="img" class="card-img-top" [alt]="title" />
+  <div class="card-body">
+    <h4 class="card-title">{{ title }}</h4>
+    <p *ngIf="text" class="card-text">{{ text }}</p>
+  </div>
+  <div *ngIf="date || getIsHours" class="card-footer">
+    <small>
+      <ng-container *ngIf="date">
+        <i class="bx bx-calendar-event"></i>
+        {{ date | dayMonthFormat }}
+      </ng-container>
+      <br *ngIf="date && getIsHours" />
+      <ng-container *ngIf="getIsHours">
+        <i class="bx bx-time-five"></i>
+        {{ hours | hoursFormat }}
+      </ng-container>
+    </small>
+  </div>
+</a>

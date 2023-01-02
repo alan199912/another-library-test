@@ -1,0 +1,15 @@
+<div [id]="identifier">
+  <div class="accordion" id="accordionExample">
+    <div class="card" *ngFor="let collapse of expandableContent; index as i">
+      <button class="card-header collapsed card-link" data-toggle="collapse" [attr.data-target]="'#' + identifier + i">
+        <i *ngIf="collapse.icon" [class]="'align-top mr-1 ' + collapse.icon"></i>
+        {{ collapse.title }}
+      </button>
+      <div [id]="identifier + i" class="collapse" [attr.data-parent]="!isMultipleSelection ? '#' + identifier : ''">
+        <div class="card-body">
+          {{ collapse.description }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

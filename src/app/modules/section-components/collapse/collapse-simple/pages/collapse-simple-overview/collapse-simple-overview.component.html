@@ -1,0 +1,53 @@
+<section class="section-overview">
+  <p class="lead">
+    Los colapsables permiten a los usuarios mostrar y ocultar secciones de contenido relacionado en una página.
+  </p>
+
+  <div class="section-collapse">
+    <h2>Colapsable simple</h2>
+
+    <p>
+      Se utilizan para brindarle a los usuarios información sobre un tema en particular. Generalmente los podemos
+      encontrar en la sección de preguntas frecuentes de una página.
+    </p>
+  </div>
+
+  <div class="section-design">
+    <h2>Diseño y estructura (Contexto de uso)</h2>
+
+    <h3>Colapsable - Simple</h3>
+
+    <p>
+      Colapsable de selección única. Los grupos de colapsables de selección única permiten un solo colapsable abierto
+      por vez. Cuando se acciona otro colapsable dentro del mismo grupo se despliega mostrando el contenido, mientras
+      que el último que estaba abierto procede a cerrarse.
+    </p>
+
+    <img
+      class="card-img-top"
+      src="https://gcba.github.io/estandares/componentes/colapsable/collapse_simple.png"
+      alt="imagen sobre collapsable simple"
+    />
+
+    <h3>Colapsable - Multiple</h3>
+
+    <p>
+      Colapsable de selección múltiple. Los grupos de colapsables de selección múltiple permiten que varios colapsables
+      estén abiertos al mismo tiempo sin límites de apertura.
+    </p>
+  </div>
+
+  <img
+    class="card-img-top"
+    src="https://gcba.github.io/estandares/componentes/colapsable/collapse_multiple.png"
+    alt="imagen sobre collapsable multiple"
+  />
+
+  <div class="section-usability">
+    <h2>Usabilidad</h2>
+
+    <app-best-practices [practices]="bestPractices"></app-best-practices>
+
+    <app-bad-practices [practices]="badPractices"></app-bad-practices>
+  </div>
+</section>

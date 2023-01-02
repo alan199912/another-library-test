@@ -1,0 +1,14 @@
+<a
+  #card
+  [class.unbordered]="isOnlyWithIcon"
+  [class.card-lg]="isOnlyWithImage"
+  class="card card-horizontal"
+  [routerLink]="route"
+>
+  <ng-content *ngIf="!img" [select]="'[icon]'"></ng-content>
+  <img *ngIf="img" oDefaultImage [src]="img" class="card-img-left" [alt]="title" />
+  <div class="card-body">
+    <h4 class="card-title">{{ title }}</h4>
+    <p class="card-text" *ngIf="text">{{ text }}</p>
+  </div>
+</a>

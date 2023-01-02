@@ -1,0 +1,50 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2>Referencia de API para el componente Colapsable de Obelisco</h2>
+    <pre class="code import">
+      <code appPrism language="javascript" code="import { OCollapseModule } from '@alan199912/library-test/collapse';"></code>
+    </pre>
+  </div>
+
+  <h3>Etiqueta</h3>
+  <hr />
+
+  <div class="section-selector">
+    <h4>OCollapseInfo</h4>
+    <p>Selector: <strong>o-collapse-info</strong></p>
+
+    <div class="section-properties">
+      <h5>Propiedades</h5>
+
+      <o-table
+        [displayedColumns]="columnsCollapse"
+        [dataSource]="dataSourceCollapse"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+  </div>
+
+  <h3>Tipos de datos</h3>
+  <hr />
+
+  <div class="section-type">
+    <h4>CollapseInfo</h4>
+    <p>Permite establecer los valores de la propiedad <strong>expandableContent</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ exampleIterface }}</code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [displayedColumns]="columnsCollapse"
+          [dataSource]="dataSourceInterface"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+</section>

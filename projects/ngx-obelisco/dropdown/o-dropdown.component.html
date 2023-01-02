@@ -1,0 +1,34 @@
+<div class="dropdown">
+  <button
+    type="button"
+    class="btn btn-dropdown"
+    [class.dropdown-toggle]="!isIcon"
+    [class.btn-dropdown-border]="isBordered"
+    [class.active]="getIsSelectedOption"
+    [ngClass]="[size !== 'md' ? 'btn-dropdown-' + size : '']"
+    data-toggle="dropdown"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    <ng-container *ngIf="!isIcon; else templateIcon">
+      {{ name }}
+      {{ getNumberSelectedOptions }}
+    </ng-container>
+
+    <ng-template #templateIcon>
+      {{ name }}
+      <ng-content select="[icon]"></ng-content>
+    </ng-template>
+  </button>
+  <div class="dropdown-menu">
+    <button
+      (click)="selectedOption(item)"
+      *ngFor="let item of items"
+      class="dropdown-item"
+      [class.active]="selectedOptionsArr.includes(item.key)"
+      type="button"
+    >
+      {{ item.value }}
+    </button>
+  </div>
+</div>

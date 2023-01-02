@@ -1,0 +1,7 @@
+<p class="steps">{{ currentStep }} de {{ totalSteps }} pasos</p>
+<div class="progress">
+  <div class="progress-bar bg-primary" role="progressbar" [style.width.%]="percentage | number"></div>
+</div>
+
+<button class="btn btn-sm btn-link mr-2" (click)="clickPrev()">Anterior</button>
+<button class="btn btn-sm btn-link" (click)="clickNext()">Siguiente</button>

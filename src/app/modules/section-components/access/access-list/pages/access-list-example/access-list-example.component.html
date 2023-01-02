@@ -1,0 +1,109 @@
+<section class="section-example">
+  <app-viewer title="Lista de Accesos" [isNavCode]="true">
+    <div component class="col-4">
+      <o-access-list title="Título" description="Bajada" [accessElements]="accessListItems"></o-access-list>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{exampleAccessListHTML}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{exampleAccessListTS}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con Acceso inferior" [isNavCode]="true">
+    <div component class="col-4">
+      <o-access-list title="Título" description="Bajada" [accessElements]="accessListItems" [access]="accessItem">
+      </o-access-list>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{exampleAccessListWithBottonAccessHTML}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{exampleAccessListWithBottomAccessTS}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con Icono" [isNavCode]="true">
+    <div component class="col-4">
+      <o-access-list title="Título" description="Bajada" [accessElements]="accessListIconItems" [access]="accessItem">
+        <span icon class="card-access-icon descriptive">Nº</span>
+      </o-access-list>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{exampleAccessListWithIconHTML}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{exampleAccessListWithIconTS}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con Descripción" [isNavCode]="true">
+    <div component class="col-4">
+      <o-access-list
+        title="Título"
+        description="Bajada"
+        [accessElements]="accessListDescriptiveItems"
+        [access]="accessItem"
+      >
+        <span icon class="card-access-icon descriptive">Nº</span>
+      </o-access-list>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{exampleAccessListWithIconHTML}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{exampleAccessListDescriptionWithIconTS}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con Categorías" [isNavCode]="true">
+    <div component class="col-4">
+      <o-access-list
+        title="Título"
+        description="Bajada"
+        [accessCategoryElements]="accessCategoryItems"
+        [access]="accessItem"
+      >
+        <span icon class="card-access-icon descriptive">Nº</span>
+      </o-access-list>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{exampleAccessListWithCategoriesHTML}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{exampleAccessListWithCategoriesTS}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con Categorías e Icono" [isNavCode]="true">
+    <div component class="col-4">
+      <o-access-list
+        title="Título"
+        description="Bajada"
+        [accessCategoryElements]="accessCategoryIconItems"
+        [access]="accessItem"
+      >
+        <span icon class="card-access-icon descriptive">Nº</span>
+      </o-access-list>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{exampleAccessListWithCategoriesHTML}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{exampleAccessListWithCategoriesIconTS}}</code>
+    </pre>
+  </app-viewer>
+</section>

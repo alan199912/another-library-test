@@ -1,0 +1,83 @@
+{
+  "name": "ngx-obelisco-demo",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "style:all": "npm run style:lint && npm run style:prettier",
+    "style:lint": "eslint -c .eslintrc.json --fix projects/ngx-obelisco/**/**.*{ts,html} src/**/**.*{ts,html}",
+    "style:prettier": "prettier --config .prettierrc --write projects/ngx-obelisco/**/**.*{ts,html,scss} src/**/**.*{ts,html,scss}",
+    "lint": "ng lint",
+    "prepare": "husky install",
+    "semantic-release": "semantic-release",
+    "deploy": "ng build --configuration=production --base-href='https://github.com/alan199912/another-library-test' --source-map --build-optimizer"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^14.0.7",
+    "@angular/common": "^14.0.7",
+    "@angular/compiler": "^14.0.7",
+    "@angular/core": "^14.0.7",
+    "@angular/forms": "^14.0.7",
+    "@angular/platform-browser": "^14.0.7",
+    "@angular/platform-browser-dynamic": "^14.0.7",
+    "@angular/router": "^14.0.7",
+    "@gcba/obelisco": "^1.43.1",
+    "@types/prismjs": "^1.26.0",
+    "boxicons": "^2.1.4",
+    "husky": "^8.0.1",
+    "pretty-quick": "^3.1.3",
+    "rxjs": "~7.5.5",
+    "tslib": "^2.4.0",
+    "zone.js": "^0.11.7"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && npm run style:all",
+      "pre-push": "ng test --no-watch && ng build"
+    }
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^14.0.7",
+    "@angular-eslint/builder": "14.0.2",
+    "@angular-eslint/eslint-plugin": "14.0.2",
+    "@angular-eslint/eslint-plugin-template": "14.0.2",
+    "@angular-eslint/schematics": "14.0.2",
+    "@angular-eslint/template-parser": "14.0.2",
+    "@angular/cli": "^14.0.7",
+    "@angular/compiler-cli": "^14.0.7",
+    "@babel/core": "^7.18.10",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@types/jasmine": "^3.10.6",
+    "@types/node": "^12.20.55",
+    "@typescript-eslint/eslint-plugin": "5.29.0",
+    "@typescript-eslint/parser": "5.29.0",
+    "babel-loader": "^8.2.5",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.6.4",
+    "eslint-plugin-prefer-arrow": "1.2.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.0",
+    "jasmine-core": "~3.10.0",
+    "karma": "^6.3.20",
+    "karma-chrome-launcher": "^3.1.1",
+    "karma-coverage": "~2.1.0",
+    "karma-jasmine": "^4.0.2",
+    "karma-jasmine-html-reporter": "~1.7.0",
+    "ng-packagr": "^14.1.0",
+    "prettier": "^2.7.1",
+    "prettier-eslint": "^15.0.1",
+    "prismjs": "^1.29.0",
+    "semantic-release": "^19.0.5",
+    "typescript": "~4.7.4"
+  },
+  "lint-staged": {
+    "*": "npm run style:all"
+  }
+}

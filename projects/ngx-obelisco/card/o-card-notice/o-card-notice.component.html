@@ -1,0 +1,14 @@
+<a #card class="card" [routerLink]="route">
+  <img oDefaultImage [src]="img" class="card-img-top" [alt]="title" />
+  <ng-content select="[audio]"></ng-content>
+  <div class="card-body">
+    <div *ngIf="getIsTags" class="mb-2">
+      <span *ngFor="let tag of tags" class="badge badge-info">{{ tag }}</span>
+    </div>
+    <h4 class="card-title">{{ title }}</h4>
+    <p *ngIf="text" class="card-text">{{ text }}</p>
+  </div>
+  <div *ngIf="datePublication" class="card-footer">
+    <small>Fecha de publicación: {{ datePublication | date: 'shortDate' }}</small>
+  </div>
+</a>

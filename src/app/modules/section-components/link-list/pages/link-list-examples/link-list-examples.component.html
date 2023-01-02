@@ -1,0 +1,78 @@
+<section class="section-example">
+  <app-viewer title="Lista con botones de descarga">
+    <div component class="col-5">
+      <o-link-list
+        title="Lista de enlaces"
+        description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+        image="https://gcba.github.io/Obelisco/cards/paseobajo-wide.png"
+      >
+        <div list-link>
+          <h4 class="list-link-item-title">Nombre del archivo</h4>
+          <a class="btn btn-secondary btn-sm download-link card-link" href="#" target="_blank" rel="noreferrer">
+            Descargar
+          </a>
+          <h4 class="list-link-item-title">Nombre del archivo</h4>
+          <a class="btn btn-secondary btn-sm download-link card-link" href="#" target="_blank" rel="noreferrer">
+            Descargar
+          </a>
+          <h4 class="list-link-item-title">Nombre del archivo</h4>
+          <a class="btn btn-secondary btn-sm download-link card-link" href="#" target="_blank" rel="noreferrer">
+            Descargar
+          </a>
+        </div>
+      </o-link-list>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{exampleDownloadButtonHTML}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Lista con enlaces">
+    <div component class="col-5">
+      <o-link-list
+        component
+        title="Lista de enlaces"
+        description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+        image="https://gcba.github.io/Obelisco/cards/paseobajo-wide.png"
+      >
+        <div list-link>
+          <h4 class="list-link-item-title">Nombre del archivo</h4>
+          <a class="card-link" href="#" target="_blank" rel="noreferrer">Enlace</a>
+          <h4 class="list-link-item-title">Nombre del archivo</h4>
+          <a class="card-link" href="#" target="_blank" rel="noreferrer">Enlace</a>
+          <h4 class="list-link-item-title">Nombre del archivo</h4>
+          <a class="card-link" href="#" target="_blank" rel="noreferrer">Enlace</a>
+        </div>
+      </o-link-list>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{exampleLinkHTML}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Lista con enlaces de descarga">
+    <div component class="col-5">
+      <o-link-list
+        component
+        title="Lista de enlaces"
+        description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+        image="https://gcba.github.io/Obelisco/cards/paseobajo-wide.png"
+      >
+        <div list-link>
+          <h4 class="list-link-item-title">Nombre del archivo</h4>
+          <a class="download card-link" href="#" target="_blank" rel="noreferrer"> Enlace </a>
+          <h4 class="list-link-item-title">Nombre del archivo</h4>
+          <a class="download card-link" href="#" target="_blank" rel="noreferrer"> Enlace </a>
+          <h4 class="list-link-item-title">Nombre del archivo</h4>
+          <a class="download card-link" href="#" target="_blank" rel="noreferrer"> Enlace </a>
+        </div>
+      </o-link-list>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{exampleDownloadLinkHTML}}</code>
+    </pre>
+  </app-viewer>
+</section>

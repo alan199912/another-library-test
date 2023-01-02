@@ -1,0 +1,102 @@
+<section class="section-example">
+  <app-viewer title="Horizontal con Imagen">
+    <o-large-featured-panel
+      component
+      title="Encabezado"
+      description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit nostrum quo animi dignissimos omnis dicta quia placeat, nesciunt quasi hic autem iure eum necessitatibus ea expedita quas. Rem, aspernatur repudiandae."
+      url="https://raw.githubusercontent.com/gcba/Obelisco/master/static/panel/larreta.jpg"
+    >
+      <button type="button" class="btn btn-lg btn-primary card-link">Botón</button>
+      <button type="button" class="btn btn-lg btn-secondary card-link">Botón</button>
+    </o-large-featured-panel>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{examplePanelLargeImageHorizontalHTML}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Horizontal con Imagen - Botón de descarga">
+    <o-large-featured-panel
+      component
+      title="Encabezado"
+      description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit nostrum quo animi dignissimos omnis dicta quia placeat, nesciunt quasi hic autem iure eum necessitatibus ea expedita quas. Rem, aspernatur repudiandae."
+      url="https://raw.githubusercontent.com/gcba/Obelisco/master/static/panel/larreta.jpg"
+    >
+      <a class="btn btn-secondary btn-lg download-link" href="panel/larreta.jpg" download=""> Descargar </a>
+    </o-large-featured-panel>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{examplePanelLargeImageHorizontalDownloadButtonHTML}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Horizontal con Imagen - Enlace de descarga">
+    <o-large-featured-panel
+      component
+      title="Encabezado"
+      description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit nostrum quo animi dignissimos omnis dicta quia placeat, nesciunt quasi hic autem iure eum necessitatibus ea expedita quas. Rem, aspernatur repudiandae."
+      url="https://raw.githubusercontent.com/gcba/Obelisco/master/static/panel/larreta.jpg"
+    >
+      <a class="download" href="panel/larreta.jpg" download="">Descargar</a>
+    </o-large-featured-panel>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{examplePanelLargeImageHorizontalDownloadLinkHTML}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Horizontal con Video">
+    <o-large-featured-panel
+      component
+      title="Encabezado"
+      description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit nostrum quo animi dignissimos omnis dicta quia placeat, nesciunt quasi hic autem iure eum necessitatibus ea expedita quas. Rem, aspernatur repudiandae."
+      url="https://raw.githubusercontent.com/gcba/Obelisco/master/static/panel/larreta.mp4"
+      [isVideo]="true"
+    >
+      <button type="button" class="btn btn-lg btn-primary card-link">Botón</button>
+      <button type="button" class="btn btn-lg btn-secondary card-link">Botón</button>
+    </o-large-featured-panel>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{examplePanelLargeVideoHorizontalHTML}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Vertical con Imagen">
+    <div component class="col-5">
+      <o-large-featured-panel
+        title="Encabezado"
+        description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit nostrum quo animi dignissimos omnis dicta quia placeat, nesciunt quasi hic autem iure eum necessitatibus ea expedita quas. Rem, aspernatur repudiandae."
+        url="https://raw.githubusercontent.com/gcba/Obelisco/master/static/panel/larreta.jpg"
+        [isVertical]="true"
+      >
+        <button type="button" class="btn btn-lg btn-primary card-link">Botón</button>
+        <button type="button" class="btn btn-lg btn-secondary card-link">Botón</button>
+      </o-large-featured-panel>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{examplePanelLargeImageVerticalHTML}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Vertical con Video">
+    <div component class="col-5">
+      <o-large-featured-panel
+        component
+        title="Encabezado"
+        description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit nostrum quo animi dignissimos omnis dicta quia placeat, nesciunt quasi hic autem iure eum necessitatibus ea expedita quas. Rem, aspernatur repudiandae."
+        url="https://raw.githubusercontent.com/gcba/Obelisco/master/static/panel/larreta.mp4"
+        [isVertical]="true"
+        [isVideo]="true"
+      >
+        <button type="button" class="btn btn-lg btn-primary card-link">Botón</button>
+        <button type="button" class="btn btn-lg btn-secondary card-link">Botón</button>
+      </o-large-featured-panel>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{examplePanelLargeVideoVerticalHTML}}</code>
+    </pre>
+  </app-viewer>
+</section>

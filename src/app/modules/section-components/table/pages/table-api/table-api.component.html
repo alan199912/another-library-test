@@ -1,0 +1,49 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2>Referencia de API para el componente Tabla de Obelisco</h2>
+    <pre class="code import">
+      <code appPrism code="import { OTableComponent } from '@alan199912/library-test/table';"></code>
+    </pre>
+  </div>
+
+  <h3>Etiqueta</h3>
+  <hr />
+
+  <div class="section-selector">
+    <h4>OTable</h4>
+    <p>Selector: <strong>o-table</strong></p>
+
+    <div class="section-properties">
+      <h5>Propiedades</h5>
+      <o-table [displayedColumns]="columns" [dataSource]="dataSource" [isStriped]="true" [isBordered]="true"></o-table>
+    </div>
+
+    <div class="section-properties">
+      <h5>Métodos</h5>
+      <o-table [displayedColumns]="columns" [dataSource]="dataSource" [isStriped]="true" [isBordered]="true"></o-table>
+    </div>
+  </div>
+
+  <h3>Tipos de datos</h3>
+  <hr />
+
+  <div class="section-type">
+    <h4>Column</h4>
+    <p>Permite establecer los valores de la propiedad <strong>displayedColumns</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism code="{{exampleIterfaceColumn}}"></code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [dataSource]="dataSourceInterface"
+          [displayedColumns]="columns"
+          [isBordered]="true"
+          [isStriped]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+</section>

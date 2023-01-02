@@ -1,0 +1,54 @@
+{
+  "name": "@alan199912/library-test",
+  "version": "1.0.0",
+  "description": "Componentes funcionales y reutilizables para Angular.",
+  "author": "Dirección General de Experiencia Digital",
+  "homepage": "https://alan199912.github.io/another-library-test/",
+  "peerDependencies": {
+    "@angular/common": "^14.0.7",
+    "@angular/core": "^14.0.7"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "@gcba/obelisco": "1.43.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alan199912/another-library-test.git"
+  },
+  "license": "MIT",
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "keywords": [
+    "angular",
+    "gcba",
+    "obelisco",
+    "components",
+    "design",
+    "ui",
+    "cards",
+    "collapse",
+    "breadcrumb",
+    "alert",
+    "access",
+    "dropdown",
+    "footer",
+    "link-list",
+    "modal",
+    "nav",
+    "option",
+    "pagination",
+    "panel",
+    "table",
+    "progress",
+    "steps",
+    "status"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": false
+}

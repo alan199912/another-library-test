@@ -1,0 +1,59 @@
+<section class="section-example">
+  <app-viewer title="Con icono">
+    <o-card-container
+      component
+      title="Título de tarjeta"
+      text="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
+      route="/components"
+    >
+      <i icon class="bx bxs-user-circle card-icon"></i>
+    </o-card-container>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ cardIcon }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Sin icono">
+    <o-card-container
+      component
+      title="Título de tarjeta"
+      text="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
+      route="/components"
+    ></o-card-container>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ cardNoIcon }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Solo titulo">
+    <o-card-container component title="Título de tarjeta" route="/components"></o-card-container>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ cardJustTitle }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con audio">
+    <o-card-container
+      component
+      title="Título de tarjeta"
+      text="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
+      route="/components"
+    >
+      <i icon class="bx bxs-user-circle card-icon"></i>
+      <audio audio class="w-100" controls="">
+        <source
+          src="https://commondatastorage.googleapis.com/codeskulptor-assets/Collision8-Bit.ogg"
+          type="audio/ogg"
+        />
+        Your browser does not support the audio tag.
+      </audio>
+    </o-card-container>
+    <pre appClipboard component-html class="code">
+        <button class="btn btn-clipboard">Copiar</button>
+        <code appPrism language="html">{{ cardAudio }}</code>
+      </pre>
+  </app-viewer>
+</section>

@@ -1,0 +1,28 @@
+<section class="section-example">
+  <app-viewer title="Modal de confirmacion">
+    <div component>
+      <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Ver modal</button>
+      <o-modal dataTarget="exampleModal" title="Titulo del Modal" description="Descripción del modal">
+        <button class="btn btn-link" data-dismiss="modal">Salir</button>
+        <button class="btn btn-primary">Aceptar</button>
+      </o-modal>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html" code="{{exampleModalConfirmationHTML}}"></code>
+    </pre>
+  </app-viewer>
+  <app-viewer title="Modal de peligro">
+    <div component>
+      <button class="btn btn-primary" data-toggle="modal" data-target="#dangerModal">Ver modal</button>
+      <o-modal dataTarget="dangerModal" title="Titulo del Modal" description="Descripción del modal">
+        <button class="btn btn-secondary" data-dismiss="modal">Salir</button>
+        <button class="btn btn-danger">Aceptar</button>
+      </o-modal>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html" code="{{exampleModalDangerHTML}}"></code>
+    </pre>
+  </app-viewer>
+</section>

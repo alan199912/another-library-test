@@ -1,0 +1,27 @@
+<div class="group-access">
+  <div class="card-access">
+    <div class="card-access-body p-list">
+      <div class="">
+        <h3 class="card-access-title">{{ title }}</h3>
+        <p class="card-access-text">{{ description }}</p>
+      </div>
+      <ng-content select="[icon]"></ng-content>
+    </div>
+    <div class="container-access">
+      <hr class="clearfix" />
+      <div class="access-option">
+        <ng-container *ngIf="getIsAccessElements; else categoryElements">
+          <o-access [accessList]="accessElements"></o-access>
+        </ng-container>
+
+        <ng-template #categoryElements>
+          <ng-container *ngFor="let accessCategory of accessCategoryElements">
+            <h2 class="title-option">{{ accessCategory.name }}</h2>
+            <o-access [accessList]="accessCategory.access"></o-access>
+          </ng-container>
+        </ng-template>
+      </div>
+    </div>
+    <o-access *ngIf="access" [accessList]="[access]" [isBig]="true" [isCard]="true"></o-access>
+  </div>
+</div>

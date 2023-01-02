@@ -1,0 +1,89 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2>Referencia de API para el componente Footer de Obelisco</h2>
+    <pre class="code import">
+      <code appPrism language="javascript" code="import { OFooterComponent } from '@alan199912/library-test/footer';"></code>
+    </pre>
+  </div>
+
+  <h3>Etiqueta</h3>
+  <hr />
+
+  <div class="section-selector">
+    <h4>OFooter</h4>
+    <p>Selector: <strong>o-footer</strong></p>
+
+    <div class="section-properties">
+      <h5>Propiedades</h5>
+
+      <o-table [displayedColumns]="columns" [dataSource]="dataSource" [isStriped]="true" [isBordered]="true"></o-table>
+    </div>
+  </div>
+
+  <h3>Tipos de datos</h3>
+  <hr />
+
+  <div class="section-type">
+    <h4>Phone</h4>
+    <p>Permite establecer los valores de la propiedad <strong>phonesList</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ exampleIterfacePhone }}</code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [displayedColumns]="columns"
+          [dataSource]="dataSourceFooterPhoneInterface"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="section-type">
+    <h4>Network</h4>
+    <p>Permite establecer los valores de la propiedad <strong>networksList</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ exampleIterfaceNetwork }}</code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [displayedColumns]="columns"
+          [dataSource]="dataSourceFooterNetworkInterface"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="section-type">
+    <h4>Link</h4>
+    <p>Permite establecer los valores de la propiedad <strong>linksList</strong>.</p>
+
+    <div class="section-interface">
+      <pre class="code import">
+        <code appPrism language="javascript">{{ exampleIterfaceLink }}</code>
+      </pre>
+      <div class="section-properties">
+        <h5>Propiedades</h5>
+        <o-table
+          [displayedColumns]="columns"
+          [dataSource]="dataSourceFooterLinkListInterface"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+</section>

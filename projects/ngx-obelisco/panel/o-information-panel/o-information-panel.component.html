@@ -1,0 +1,13 @@
+<div class="panel-deck max-cards-2">
+  <ng-container *ngFor="let panel of panelList">
+    <div class="card card-simple card-horizontal">
+      <img oDefaultImage [src]="panel.image" class="card-img-left-panel" [alt]="panel.title" />
+      <div class="card-body">
+        <h4 class="card-title">{{ panel.title }}</h4>
+        <p class="card-text-panel">
+          {{ panel.description }}
+        </p>
+      </div>
+    </div>
+  </ng-container>
+</div>

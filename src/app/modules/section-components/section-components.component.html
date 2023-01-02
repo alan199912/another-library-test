@@ -1,0 +1,24 @@
+<section class="section-components">
+  <div class="sidebar">
+    <o-nav-vertical [navItems]="componentsNavigation"></o-nav-vertical>
+  </div>
+  <div class="component-description-content">
+    <h2 class="title-component" #componentTitle>{{ title }}</h2>
+
+    <ng-container *ngIf="!isComponentTemplate; else componentTemplate">
+      <div class="component-detail" #childComponent>
+        <router-outlet></router-outlet>
+      </div>
+    </ng-container>
+
+    <ng-template #componentTemplate>
+      <div class="card-deck">
+        <o-card-container
+          *ngFor="let component of componentsNavigation"
+          [title]="component.title"
+          [route]="component.route"
+        ></o-card-container>
+      </div>
+    </ng-template>
+  </div>
+</section>

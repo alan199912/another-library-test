@@ -1,0 +1,33 @@
+:host {
+  .example-wrapper {
+    border-radius: 4px;
+    padding: 0 24px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 5rem;
+
+    .example-viewer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 8px 8px 0px;
+
+      > p {
+        margin: 0;
+      }
+    }
+
+    > h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    .wrapper {
+      width: 100%;
+      padding: 1rem;
+    }
+
+    .d-flex {
+      gap: 0.625rem;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<section class="section-example">
+  <app-viewer title="Selección única" [isNavCode]="true">
+    <o-collapse component [expandableContent]="array" identifier="collapseOne"></o-collapse>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exampleHTML }}
+      </code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">
+        {{ exampleTs }}
+      </code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Selección multiple" [isNavCode]="true">
+    <o-collapse
+      component
+      [expandableContent]="array"
+      [isMultipleSelection]="true"
+      identifier="collapseTwo"
+    ></o-collapse>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exampleHTMLMultiple }}
+      </code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">
+        {{ exampleTs }}
+      </code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con icono" [isNavCode]="true">
+    <o-collapse component [expandableContent]="arrayIcon" identifier="collapseThree"></o-collapse>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exampleHTMLIcon }}
+      </code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">
+        {{ exampleIconTs }}
+      </code>
+    </pre>
+  </app-viewer>
+</section>

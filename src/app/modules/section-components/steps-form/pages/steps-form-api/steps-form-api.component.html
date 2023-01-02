@@ -1,0 +1,70 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2>Referencia de API para el componente Pasos de un formulario de Obelisco</h2>
+    <pre class="code import">
+      <code appPrism code="import { OStepsFormComponent } from '@alan199912/library-test/steps-form';"></code>
+    </pre>
+  </div>
+
+  <h3>Etiqueta</h3>
+  <hr />
+
+  <div class="section-selector">
+    <h4>OStepsForm</h4>
+    <p>Selector: <strong>o-steps-form</strong></p>
+
+    <div class="section-properties">
+      <h5>Como se usa</h5>
+
+      <p>
+        Se puede usar las directivas <strong>StepNextDirective</strong> y
+        <strong>StepPreviousDirective</strong> importado en el modulo donde se va a usar y agregarlo en botones
+      </p>
+      <pre class="code import">
+        <code appPrism code="import { StepNextDirective } from 'ngx-obelisco';"></code>
+      </pre>
+      <pre class="code import">
+        <code appPrism code="import { StepPreviousDirective } from 'ngx-obelisco';"></code>
+      </pre>
+
+      <p>
+        Ver ejemplo
+        <a [routerLink]="['/components/steps-form/examples']" fragment="example-directive">con botones y directiva</a>
+      </p>
+
+      <p>
+        O de otra manera, se puede usar inyectando su servicio para inicializar los <strong>steps</strong> y luego darle
+        funcionalidad.
+      </p>
+
+      <pre class="code import">
+        <code appPrism code="import { StepService } from 'ngx-obelisco';"></code>
+      </pre>
+
+      <p class="mb-4">
+        Ver ejemplo
+        <a [routerLink]="['/components/steps-form/examples']" fragment="example-functionality">
+          con botones y funcionalidad
+        </a>
+      </p>
+
+      <h5>Propiedades</h5>
+
+      <o-table
+        [displayedColumns]="columns"
+        [dataSource]="dataSourceInputs"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+      <br />
+
+      <h5>Métodos</h5>
+      <o-table
+        [displayedColumns]="columns"
+        [dataSource]="dataSourceOutput"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+  </div>
+</section>

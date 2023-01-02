@@ -1,0 +1,64 @@
+<footer class="main-footer">
+  <div class="container" *ngIf="getIsPhones || getIsNetworks">
+    <section *ngIf="getIsPhones">
+      <h4>Teléfonos útiles</h4>
+      <ul class="list-inline">
+        <li class="list-inline-item phone-items" *ngFor="let phone of phonesList">
+          <a [href]="phone.number">{{ phone.title }}</a>
+        </li>
+      </ul>
+      <a href="https://www.buenosaires.gob.ar/laciudad/telefonosutiles">Ver todos los teléfonos</a>
+    </section>
+    <section *ngIf="getIsNetworks">
+      <h4>Redes de la ciudad</h4>
+      <ul class="list-inline">
+        <li class="list-inline-item redes-items" *ngFor="let network of networksList">
+          <a [href]="network.url" target="_blank"><i class="bx {{ network.icon }}"></i>{{ network.title }}</a>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <hr class="divider" *ngIf="getIsPhones || getIsNetworks" />
+  <div class="container">
+    <section class="footer-legal-section">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-5 col-xl-4 mb-4 mb-md-0 footer-content-img">
+          <img
+            oDefaultImage
+            class="d-lg-none"
+            src="https://raw.githubusercontent.com/gcba/Obelisco/8e3c51245a98c0c2c5fed1e43e20d53fa135e98d/static/footer/ciudad-ba-sm.svg"
+            alt="Ciudad de Buenos Aires"
+            height="48"
+          />
+          <img
+            oDefaultImage
+            class="d-none d-lg-inline"
+            src="https://raw.githubusercontent.com/gcba/Obelisco/8e3c51245a98c0c2c5fed1e43e20d53fa135e98d/static/footer/ciudad-ba.svg"
+            alt="Ciudad de Buenos Aires"
+            height="40"
+          />
+          <img
+            oDefaultImage
+            class="img-vamos-ba"
+            src="https://raw.githubusercontent.com/gcba/Obelisco/8e3c51245a98c0c2c5fed1e43e20d53fa135e98d/static/footer/vamos-ba.svg"
+            alt="Vamos Buenos Aires"
+          />
+        </div>
+        <div class="col-12 col-md-7 col-xl-8" *ngIf="getIsLinks">
+          <ul class="list-inline">
+            <li class="list-inline-item" *ngFor="let link of linksList">
+              <a [href]="link.url">{{ link.title }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="footer-license-text">
+        Los contenidos de buenosaires.gob.ar están licenciados bajo
+        <br class="d-none d-sm-inline" />
+        Creative Commons Reconocimiento 2.5 Argentina License.
+      </div>
+    </section>
+  </div>
+</footer>

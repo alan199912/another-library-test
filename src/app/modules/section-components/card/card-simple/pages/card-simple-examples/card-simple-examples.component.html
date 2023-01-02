@@ -1,0 +1,41 @@
+<section class="section-example">
+  <app-viewer title="Con icono">
+    <o-card-simple
+      component
+      title="Título de tarjeta"
+      text="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
+      route="/components"
+    >
+      <i icon class="bx bx-news card-icon"></i>
+    </o-card-simple>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ cardIcon }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Sin icono">
+    <o-card-simple
+      component
+      title="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed"
+      text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"
+      route="/components"
+    ></o-card-simple>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ cardNoIcon }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Solo titulo">
+    <o-card-simple
+      component
+      title="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed"
+      route="/components"
+    ></o-card-simple>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ cardJustTitle }}</code>
+    </pre>
+  </app-viewer>
+</section>

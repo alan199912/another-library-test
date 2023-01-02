@@ -1,0 +1,12 @@
+<div class="group-access">
+  <div class="card-access">
+    <div class="card-access-body" [class.reverse]="isReverse">
+      <div>
+        <h3 class="card-access-title">{{ title }}</h3>
+        <p class="card-access-text">{{ description }}</p>
+      </div>
+      <ng-content [select]="'[icon]'"></ng-content>
+    </div>
+    <o-access [accessList]="[access]" [isBig]="true" [isCard]="true"></o-access>
+  </div>
+</div>

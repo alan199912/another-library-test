@@ -1,0 +1,52 @@
+<section class="section-example">
+  <app-viewer title="Simple" [isNavCode]="true">
+    <div component style="width: 500px">
+      <o-card-notice
+        title="Título de tarjeta"
+        text="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
+        route="/components"
+        img="https://gcba.github.io/Obelisco/cards/evento.jpg"
+        [tags]="tags"
+        [datePublication]="date"
+      >
+      </o-card-notice>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ cardExampleHTML }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{ cardExampleTS }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con audio" [isNavCode]="true">
+    <div component style="width: 500px">
+      <o-card-notice
+        title="Título de tarjeta"
+        text="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
+        route="/components"
+        img="https://gcba.github.io/Obelisco/cards/evento.jpg"
+        [tags]="tags"
+        [datePublication]="date"
+      >
+        <audio audio class="audio-event w-100" controls="">
+          <source
+            src="https://commondatastorage.googleapis.com/codeskulptor-assets/Collision8-Bit.ogg"
+            type="audio/ogg"
+          />
+          Your browser does not support the audio tag.
+        </audio>
+      </o-card-notice>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ cardExampleAudioHTML }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{ cardExampleTS }}</code>
+    </pre>
+  </app-viewer>
+</section>

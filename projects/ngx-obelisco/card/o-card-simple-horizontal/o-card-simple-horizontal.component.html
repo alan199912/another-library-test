@@ -1,0 +1,9 @@
+<div class="card card-simple card-horizontal card-lg">
+  <img oDefaultImage *ngIf="img" [src]="img" class="card-img-left" [alt]="title" />
+  <div class="card-body">
+    <h4 class="card-title">
+      <a #cardLink [routerLink]="route">{{ title }}</a>
+    </h4>
+    <p *ngIf="text" class="card-text">{{ text }}</p>
+  </div>
+</div>

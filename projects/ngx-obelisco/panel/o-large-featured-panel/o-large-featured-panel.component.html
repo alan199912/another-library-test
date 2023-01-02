@@ -1,0 +1,14 @@
+<div class="card card-simple" [ngClass]="[isVertical ? 'panel-vertical' : 'panel-horizontal']">
+  <img oDefaultImage *ngIf="!isVideo" [src]="url" class="card-img" [alt]="title" />
+  <video *ngIf="isVideo" class="card-img" controls="">
+    <source [src]="url" type="video/mp4" />
+    <p>Su navegador no soporta vídeos HTML5.</p>
+  </video>
+  <div class="card-body">
+    <h2 class="card-title">{{ title }}</h2>
+    <p class="card-text">
+      {{ description }}
+    </p>
+    <ng-content></ng-content>
+  </div>
+</div>

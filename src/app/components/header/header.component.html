@@ -1,0 +1,33 @@
+<header class="navbar navbar-light navbar-md">
+  <div class="container">
+    <a [routerLink]="['/']" class="navbar-brand">
+      <img
+        class="header-logo"
+        src="https://gcba.github.io/Obelisco/header/header-logo.svg"
+        alt="Ciudad de buenos aires"
+      />
+      <h3 class="title">Ngx Obelisco</h3>
+    </a>
+    <div class="nav-flex">
+      <ul class="nav flex-row nav-pills">
+        <li class="nav-item">
+          <a [routerLink]="['/get-started']" routerLinkActive="active" class="nav-link">
+            <span>Get Started</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/components']" routerLinkActive="active" class="nav-link">
+            <span>Componentes</span>
+          </a>
+        </li>
+        <div class="flex-spacer"></div>
+        <li class="nav-item github">
+          <a href="https://github.com/gcba/ngx-obelisco" routerLinkActive="active" class="nav-link">
+            <i class="bx bxl-github"></i>
+            <span>GitHub</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

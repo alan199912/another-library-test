@@ -1,0 +1,105 @@
+<nav>
+  <ul class="nav flex-column nav-pills nav-lg">
+    <li class="nav-item" *ngFor="let item of navItems; index as i">
+      <a
+        *ngIf="item.navElements && item.navElements?.length !== 0; else templateChild"
+        routerLinkActive="active-child"
+        class="nav-link"
+        [class.active-child]="navLink.isActive"
+        #navLink="routerLinkActive"
+        [class.disabled]="item.disabled"
+        [routerLink]="item.route"
+        (click)="scrollToTop()"
+      >
+        <div *ngIf="i === 0 && item.icon; else simpleTitle" class="nav-icon">
+          <i [class]="item.icon"></i>
+          <span>{{ item.title }}</span>
+        </div>
+        <ng-template #simpleTitle>
+          <span>{{ item.title }}</span>
+        </ng-template>
+      </a>
+      <ng-template #templateChild>
+        <a
+          class="nav-link"
+          [class.active]="navLinkSecondLevel.isActive"
+          routerLinkActive="active"
+          #navLinkSecondLevel="routerLinkActive"
+          [routerLink]="item.route"
+          [class.disabled]="item.disabled"
+          (click)="scrollToTop()"
+        >
+          <div *ngIf="i === 0 && item.icon; else simpleTitle" class="nav-icon">
+            <i [class]="item.icon"></i>
+            <span>{{ item.title }}</span>
+          </div>
+          <ng-template #simpleTitle>
+            <span>{{ item.title }}</span>
+          </ng-template>
+        </a>
+      </ng-template>
+      <ul *ngFor="let secondItem of item.navElements; index as j" class="nav flex-column nav-pills">
+        <li class="nav-item">
+          <a
+            *ngIf="secondItem.navElements && secondItem.navElements?.length !== 0; else templateChild"
+            class="nav-link"
+            [class.active-child]="navLinkSecondLevel.isActive"
+            routerLinkActive="active-child"
+            #navLinkSecondLevel="routerLinkActive"
+            [routerLink]="secondItem.route"
+            [class.disabled]="item.disabled"
+            (click)="scrollToTop()"
+          >
+            <div *ngIf="j === 0 && secondItem.icon; else simpleTitle" class="nav-icon">
+              <i [class]="secondItem.icon"></i>
+              <span>{{ secondItem.title }}</span>
+            </div>
+            <ng-template #simpleTitle>
+              <span>{{ secondItem.title }}</span>
+            </ng-template>
+          </a>
+          <ng-template #templateChild>
+            <a
+              class="nav-link"
+              [class.active]="navLinkSecondLevel.isActive"
+              routerLinkActive="active"
+              #navLinkSecondLevel="routerLinkActive"
+              [routerLink]="secondItem.route"
+              [class.disabled]="item.disabled"
+              (click)="scrollToTop()"
+            >
+              <div *ngIf="j === 0 && secondItem.icon; else simpleTitle" class="nav-icon">
+                <i [class]="secondItem.icon"></i>
+                <span>{{ secondItem.title }}</span>
+              </div>
+              <ng-template #simpleTitle>
+                <span>{{ secondItem.title }}</span>
+              </ng-template>
+            </a>
+          </ng-template>
+          <ul *ngFor="let thirdItem of secondItem.navElements; index as z" class="nav flex-column nav-pills">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [class.active]="navLinkThirdLevel.isActive"
+                routerLinkActive="active"
+                #navLinkThirdLevel="routerLinkActive"
+                [routerLink]="thirdItem.route"
+                [class.disabled]="item.disabled"
+                (click)="scrollToTop()"
+              >
+                <div *ngIf="z === 0 && thirdItem.icon; else simpleTitle" class="nav-icon">
+                  <i [class]="thirdItem.icon"></i>
+                  <span>{{ thirdItem.title }}</span>
+                </div>
+                <ng-template #simpleTitle>
+                  <span>{{ thirdItem.title }}</span>
+                </ng-template>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,9 @@
+<div class="card card-simple">
+  <div class="card-body">
+    <ng-content select="[icon]"></ng-content>
+    <h4 class="card-title">
+      <a #cardLink [routerLink]="route">{{ title }}</a>
+    </h4>
+    <p *ngIf="text" class="card-text">{{ text }}</p>
+  </div>
+</div>

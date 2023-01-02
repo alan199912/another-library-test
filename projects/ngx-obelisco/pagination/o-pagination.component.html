@@ -1,0 +1,27 @@
+<nav [attr.aria-label]="ariaLabel">
+  <ul class="pagination">
+    <o-pagination-item *ngIf="!getIsFirstPage" (click)="onPrev()">
+      <span class="page-previous-icon" [attr.aria-hidden]="true"></span>
+      <span class="page-previous-text">Anterior</span>
+    </o-pagination-item>
+
+    <div *ngIf="isShowBottomTrimmer">
+      <o-pagination-number [index]="0" [current]="actualPage" (click)="selectedPage(0)"> </o-pagination-number>
+      <o-pagination-item [isDisabled]="true">...</o-pagination-item>
+    </div>
+
+    <o-pagination-number *ngFor="let i of pagesToShow" [index]="i" [current]="actualPage" (click)="selectedPage(i)">
+    </o-pagination-number>
+
+    <div *ngIf="isShowTopTrimmer">
+      <o-pagination-item [isDisabled]="true">...</o-pagination-item>
+      <o-pagination-number [index]="lastIndex" [current]="actualPage" (click)="selectedPage(lastIndex)">
+      </o-pagination-number>
+    </div>
+
+    <o-pagination-item *ngIf="!getIsLastPage" (click)="onNext()">
+      <span class="page-next-text">Siguiente</span>
+      <span class="page-next-icon" [attr.aria-hidden]="true"></span>
+    </o-pagination-item>
+  </ul>
+</nav>

@@ -1,0 +1,41 @@
+<div class="example-wrapper">
+  <div class="example-viewer">
+    <p>{{ title }}</p>
+    <nav>
+      <ul class="nav flex-row nav-pills">
+        <li class="nav-item d-flex">
+          <a class="nav-link" [class.active]="isOpenCode" (click)="isOpenCode = !isOpenCode">
+            <span>{{ linkCode }}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrapper">
+    <nav *ngIf="isOpenCode && isNavCode">
+      <ul class="nav flex-row nav-pills">
+        <li class="nav-item d-flex">
+          <a class="nav-link" [class.active]="isWindowHTML" (click)="isWindowHTML = true">
+            <span>HTML</span>
+          </a>
+          <a class="nav-link" [class.active]="!isWindowHTML" (click)="isWindowHTML = false">
+            <span>TS</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <ng-container *ngIf="!isOpenCode; else codeTemplate">
+      <ng-content select="[component]"></ng-content>
+    </ng-container>
+
+    <ng-template #codeTemplate>
+      <ng-container *ngIf="isWindowHTML; else windowTs">
+        <ng-content select="[component-html]"></ng-content>
+      </ng-container>
+    </ng-template>
+
+    <ng-template #windowTs>
+      <ng-content select="[component-ts]"></ng-content>
+    </ng-template>
+  </div>
+</div>

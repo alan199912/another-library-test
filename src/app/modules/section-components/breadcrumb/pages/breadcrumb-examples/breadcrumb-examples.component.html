@@ -1,0 +1,37 @@
+<section class="section-example">
+  <app-viewer title="Simple" id="simple">
+    <nav aria-label="breadcrumb" component>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a [routerLink]="['/']">Inicio</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a [routerLink]="['/components']">Components</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a [routerLink]="['/components/breadcrumb']">Breadcrumb</a>
+        </li>
+        <li class="breadcrumb-item">Examples</li>
+      </ol>
+    </nav>
+
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html" code="<o-breadcrumb></o-breadcrumb>"></code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Rutas personalizadas" [isNavCode]="true" id="customRoutes">
+    <o-breadcrumb component></o-breadcrumb>
+
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html" code="<o-breadcrumb></o-breadcrumb>"></code>
+    </pre>
+
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ exampleTS }}</code>
+    </pre>
+  </app-viewer>
+</section>

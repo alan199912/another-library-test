@@ -1,0 +1,27 @@
+<form class="options-container">
+  <fieldset class="dropdown">
+    <button
+      type="button"
+      class="btn btn-dropdown dropdown-toggle"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="true"
+      [ngClass]="[size !== 'md' ? 'btn-dropdown-' + size : 'btn-dropdown']"
+    >
+      {{ name }}
+    </button>
+    <div class="dropdown-menu">
+      <div *ngFor="let option of options; index as i">
+        <input type="radio" [id]="'item-' + option.key + '-' + i" [name]="option.key" class="sr-only" />
+        <label
+          (click)="selectedOption(option)"
+          [for]="'item-' + option.key + '-' + i"
+          class="dropdown-item"
+          [class.active]="option.active"
+        >
+          {{ option.value }}
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</form>

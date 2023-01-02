@@ -1,0 +1,22 @@
+<div class="progression-container">
+  <ul class="progression" [class.expanded]="isExpanded">
+    <li
+      class="progression-item"
+      [class.completed]="step.completed"
+      [class.active]="step.active"
+      aria-expanded="true"
+      *ngFor="let step of steps"
+    >
+      <p class="progression-title">{{ step.title }}</p>
+      <p class="progression-subtitle">
+        {{ step.description }}
+      </p>
+    </li>
+  </ul>
+  <button type="button" class="progression-link" (click)="isExpanded = !isExpanded">Menos detalles</button>
+</div>
+
+<br />
+
+<button class="btn btn-sm btn-link mr-2" [disabled]="isDisabledPrevious" (click)="previousStep()">Anterior</button>
+<button class="btn btn-sm btn-link" (click)="nextStep()">Siguiente</button>

@@ -1,0 +1,8 @@
+<a #card [routerLink]="route" class="card">
+  <div class="card-body">
+    <ng-content select="[icon]"></ng-content>
+    <h4 class="card-title">{{ title }}</h4>
+    <p class="card-text">{{ text }}</p>
+    <ng-content select="[audio]"></ng-content>
+  </div>
+</a>

@@ -1,0 +1,79 @@
+<section class="section-example">
+  <app-viewer title="Vertical" [isNavCode]="true">
+    <div component class="col-4">
+      <o-access [accessList]="accessListItems"></o-access>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{exampleAccessVerticalHTML}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{exampleAccessVerticalTS}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Horizontal" [isNavCode]="true">
+    <o-access component [accessList]="accessListItems" [isHorizontal]="true"></o-access>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{exampleAccessHorizontalHTML}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{exampleAccessHorizontalTS}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con Icono" [isNavCode]="true">
+    <o-access component [accessList]="accessIconListItems" [isHorizontal]="true"></o-access>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{exampleAccessHorizontalHTML}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{exampleAccessIconTs}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Con Descripción" [isNavCode]="true">
+    <div component class="col-4">
+      <o-access [accessList]="accessListDescriptionItems"></o-access>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{exampleAccessVerticalHTML}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{exampleAccessDescriptionTS}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Accesos grandes" [isNavCode]="true">
+    <o-access component [accessList]="accessBigListItems" [isHorizontal]="true" [isBig]="true"></o-access>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{exampleAccessBigHTML}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{exampleAccessBigTS}}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Logout" [isNavCode]="true">
+    <div component class="col-4">
+      <o-access [accessList]="accessLogOut"></o-access>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{exampleAccessVerticalHTML}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{exampleAccessLogOutTS}}</code>
+    </pre>
+  </app-viewer>
+</section>

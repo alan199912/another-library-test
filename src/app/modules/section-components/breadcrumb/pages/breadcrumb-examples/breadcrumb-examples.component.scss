@@ -1,0 +1,17 @@
+@media screen and (max-width: 975.98px) {
+  .breadcrumb-item {
+    &:not(:nth-last-child(2)) {
+      display: none;
+    }
+
+    &:nth-last-child(2) {
+      display: block;
+      padding-left: 0;
+
+      &::before {
+        margin-right: 0.75rem;
+        transform: rotate(0.5turn);
+      }
+    }
+  }
+}

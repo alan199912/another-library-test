@@ -1,0 +1,24 @@
+<section class="section-example">
+  <app-viewer title="Simple" [isNavCode]="true">
+    <div component style="width: 500px">
+      <o-card-event-simple
+        title="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed"
+        text="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
+        img="https://gcba.github.io/Obelisco/cards/evento.jpg"
+        [date]="date"
+        [hours]="hours"
+        route="/components"
+      >
+      </o-card-event-simple>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ cardExampleHTML }}</code>
+    </pre>
+
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{ cardExampleTS }}</code>
+    </pre>
+  </app-viewer>
+</section>

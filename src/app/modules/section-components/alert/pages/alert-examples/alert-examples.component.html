@@ -1,0 +1,75 @@
+<section class="section-example">
+  <app-viewer title="Alerta tipo texto">
+    <div oAlert component>
+      <p>Un texto simple para una alerta simple, incluso <a [routerLink]="['/']">con hipervínculos</a></p>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exampleText }}
+      </code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Destacado y texto">
+    <div oAlert component>
+      <p>
+        <strong>Este es un destacado de una alerta (opcional).</strong>
+        Un texto simple para una alerta simple, incluso <a [routerLink]="['/']">con hipervínculos</a>
+      </p>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exampleHighlight }}
+      </code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Colores">
+    <div oAlert component color="primary">
+      <p>Un texto simple para una alerta simple</p>
+    </div>
+    <div oAlert component color="success">
+      <p>Un texto simple para una alerta simple</p>
+    </div>
+    <div oAlert component color="info">
+      <p>Un texto simple para una alerta simple</p>
+    </div>
+    <div oAlert component>
+      <p>Un texto simple para una alerta simple</p>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exampleColors }}
+      </code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Listas">
+    <div oAlert component>
+      <strong>Este es un destacado de una alerta (opcional).</strong>
+      <ol class="list-links">
+        <li><a href="#">Ancla al error 1</a></li>
+        <li><a href="#">Ancla al error 2</a></li>
+        <li><a href="#">Ancla al error 3</a></li>
+      </ol>
+    </div>
+
+    <div oAlert component>
+      <strong>Este es un destacado de una alerta (opcional).</strong>
+      <ol>
+        <li>Ancla al error 1</li>
+        <li>Ancla al error 2</li>
+        <li>Ancla al error 3</li>
+      </ol>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exampleLists }}
+      </code>
+    </pre>
+  </app-viewer>
+</section>

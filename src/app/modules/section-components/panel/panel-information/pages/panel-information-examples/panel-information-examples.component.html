@@ -1,0 +1,13 @@
+<section class="section-example">
+  <app-viewer title="Panel Informativo básico" [isNavCode]="true">
+    <o-information-panel component [panelList]="panelInformationList"></o-information-panel>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{examplePanelInformationHTML}}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>{{examplePanelInformationTS}}</code>
+    </pre>
+  </app-viewer>
+</section>

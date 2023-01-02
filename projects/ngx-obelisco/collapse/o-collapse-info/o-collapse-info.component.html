@@ -1,0 +1,23 @@
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <button
+      class="card-header collapsed card-link card-info"
+      data-toggle="collapse"
+      [attr.data-target]="'#' + identifier"
+    >
+      <span class="collpase-title">{{ title }}</span>
+      <br />
+      <span class="collpase-subtitle">{{ subtitle }}</span>
+    </button>
+    <div [id]="identifier" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <ng-container *ngFor="let collapse of expandableContent; index as i">
+          <small>{{ collapse.header }}</small>
+          <h4 class="mb-0">{{ collapse.body }}</h4>
+          <small>{{ collapse.footer }}</small>
+          <hr *ngIf="i !== getLastExpandableContent" />
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

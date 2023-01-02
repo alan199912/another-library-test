@@ -1,0 +1,25 @@
+<div class="list-group" [class.list-group-row]="isHorizontal">
+  <a
+    *ngFor="let access of accessList"
+    #access
+    [routerLink]="access.route"
+    class="list-group-item"
+    [ngClass]="{
+      'item-sm': !isBig,
+      'list-group-item-logout': access.isLogOut,
+      'card-item': isCard
+    }"
+  >
+    <div *ngIf="access.description; else accessTitle" class="access-content">
+      <span class="access-title">{{ access.title }}</span>
+      <p class="access-text">{{ access.description }}</p>
+    </div>
+
+    <ng-template #accessTitle>
+      <span class="access-title">
+        <i *ngIf="access.icon" [class]="'align-middle mr-2 ' + access.icon"></i>
+        {{ access.title }}
+      </span>
+    </ng-template>
+  </a>
+</div>

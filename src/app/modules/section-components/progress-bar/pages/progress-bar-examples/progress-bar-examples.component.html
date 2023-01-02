@@ -1,0 +1,67 @@
+<section class="section-example">
+  <app-viewer title="Barra de Progreso con botones y directiva" id="example-directive">
+    <app-progress-bar-demo component></app-progress-bar-demo>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exampleButtons }}
+      </code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Barra de Progreso con botones y funcionalidad" [isNavCode]="true" id="example-functionality">
+    <div component>
+      <o-progress-bar [isSteps]="true" [currentStep]="2" color="success"></o-progress-bar>
+      <button class="btn btn-sm btn-link mr-2" (click)="previousStep()">Anterior</button>
+      <button class="btn btn-sm btn-link" (click)="nextStep()">Siguiente</button>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exampleFuncionalityHTML }}
+      </code>
+    </pre>
+
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism>
+        {{ exampleFuncionalityTS }}
+      </code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Barra de Progreso sin pasos">
+    <div component class="progress">
+      <div class="progress-bar bg-info" role="progressbar" [style.width.%]="45 | number"></div>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exampleNoSteps }}
+      </code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer class="viewer" title="Colores">
+    <div component>
+      <div class="progress">
+        <div class="progress-bar bg-primary" role="progressbar" [style.width.%]="50 | number"></div>
+      </div>
+      <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" [style.width.%]="40 | number"></div>
+      </div>
+      <div class="progress">
+        <div class="progress-bar bg-info" role="progressbar" [style.width.%]="30 | number"></div>
+      </div>
+      <div class="progress">
+        <div class="progress-bar bg-danger" role="progressbar" [style.width.%]="20 | number"></div>
+      </div>
+    </div>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">
+        {{ exampleColors }}
+      </code>
+    </pre>
+  </app-viewer>
+</section>

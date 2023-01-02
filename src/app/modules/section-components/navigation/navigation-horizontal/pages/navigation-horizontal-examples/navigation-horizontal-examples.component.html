@@ -1,0 +1,107 @@
+<section class="section-example">
+  <app-viewer title="Simple" [isNavCode]="true">
+    <o-nav-horizontal component [navItems]="navigationSimpleComponent" size="lg"></o-nav-horizontal>
+    <pre appClipboard component-html class="code">
+        <button class="btn btn-clipboard">Copiar</button>
+        <code appPrism language="html">
+          {{ simpleHTML }}
+        </code>
+      </pre>
+    <pre appClipboard component-ts class="code">
+        <button class="btn btn-clipboard">Copiar</button>
+        <code appPrism language="javascript">
+          {{ exampleTs }}
+        </code>
+      </pre>
+  </app-viewer>
+
+  <app-viewer title="Simple con icono" [isNavCode]="true">
+    <o-nav-horizontal component [navItems]="NavigationSimpleIconComponent" size="lg"></o-nav-horizontal>
+    <pre appClipboard component-html class="code">
+        <button class="btn btn-clipboard">Copiar</button>
+        <code appPrism language="html">
+          {{ simpleHTML }}
+        </code>
+      </pre>
+    <pre appClipboard component-ts class="code">
+        <button class="btn btn-clipboard">Copiar</button>
+        <code appPrism language="javascript">
+          {{ exmapleTsIcon }}
+        </code>
+      </pre>
+  </app-viewer>
+
+  <app-viewer title="Tamaños" [isNavCode]="true">
+    <div component class="option-container">
+      <form component class="d-flex flex-row justify-content-start align-items-center options-container">
+        <o-nav-horizontal
+          component
+          [navItems]="navigationSizeComponent"
+          [isBordered]="true"
+          size="sm"
+        ></o-nav-horizontal>
+        <o-nav-horizontal
+          component
+          [navItems]="navigationSizeComponent"
+          [isBordered]="true"
+          size="md"
+        ></o-nav-horizontal>
+        <o-nav-horizontal
+          component
+          [navItems]="navigationSizeComponent"
+          [isBordered]="true"
+          size="lg"
+        ></o-nav-horizontal>
+      </form>
+    </div>
+    <pre appClipboard component-html class="code">
+        <button class="btn btn-clipboard">Copiar</button>
+        <code appPrism language="html">
+          {{ sizesHTML }}
+        </code>
+      </pre>
+    <pre appClipboard component-ts class="code">
+        <button class="btn btn-clipboard">Copiar</button>
+        <code appPrism>
+          {{ sizesTs }}
+        </code>
+      </pre>
+  </app-viewer>
+
+  <app-viewer title="Simple con borde" [isNavCode]="true">
+    <o-nav-horizontal component [navItems]="navigationSimpleComponent" [isBordered]="true" size="lg"></o-nav-horizontal>
+    <pre appClipboard component-html class="code">
+        <button class="btn btn-clipboard">Copiar</button>
+        <code appPrism language="html">
+          {{ simpleBorderHTML }}
+        </code>
+      </pre>
+    <pre appClipboard component-ts class="code">
+        <button class="btn btn-clipboard">Copiar</button>
+        <code appPrism>
+          {{ exampleTs }}
+        </code>
+      </pre>
+  </app-viewer>
+
+  <app-viewer title="Simple con borde e icono" [isNavCode]="true">
+    <o-nav-horizontal
+      component
+      [navItems]="NavigationSimpleIconComponent"
+      [isBordered]="true"
+      size="lg"
+    ></o-nav-horizontal>
+    <pre appClipboard component-html class="code">
+        <button class="btn btn-clipboard">Copiar</button>
+        <code appPrism language="html">
+          {{ simpleBorderHTML }}
+        </code>
+      </pre>
+    <pre appClipboard component-ts class="code">
+        <button class="btn btn-clipboard">Copiar</button>
+        <code appPrism>
+          {{ exmapleTsIcon }}
+        </code>
+      </pre>
+  </app-viewer>
+</section>

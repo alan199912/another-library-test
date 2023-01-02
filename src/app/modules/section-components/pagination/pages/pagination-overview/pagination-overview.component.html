@@ -1,0 +1,43 @@
+<section class="section-overview">
+  <p class="lead">
+    El paginado se usa en la parte inferior de la página cuando hay demasiados resultados de búsqueda para evitar que el
+    usuario se sienta abrumado por la cantidad de información.
+  </p>
+  <article>
+    <h2>Tipos de paginado</h2>
+    <h3>Paginado</h3>
+    <p>
+      Los paginados siempre van centrados con respecto a la página. La cantidad máxima de botones a mostrar es de 5
+      (incluidos los puntos suspensivos).
+    </p>
+    <p>Oculte el Anterior en la primera página del conjunto y oculte el Siguiente en la última página del conjunto.</p>
+    <p>
+      <strong>Truncamiento</strong>: cuando el número de páginas supera el límite máximo de visualización, se utiliza
+      una elipsis, puntos suspensivos (…), para truncar las páginas restantes.
+    </p>
+    <h2>Diseño y estructura (contexto de uso)</h2>
+    <h3>Paginado</h3>
+    <p>Oculte el ANTERIOR en la primera página del conjunto y oculte el PRÓXIMO en la última página del conjunto.</p>
+    <p>
+      <img
+        src="https://gcba.github.io/estandares/componentes/paginado/paginado-1.svg"
+        alt="completar"
+        class="img-fluid"
+      />
+    </p>
+    <h3>Paginado en documentación</h3>
+    <p>Para documentación como la pagina actual puede utilizar solo los botones de Anterior y Siguiente.</p>
+    <p>
+      <img
+        src="https://gcba.github.io/estandares/componentes/paginado/paginado-2.svg"
+        alt="completar"
+        class="img-flui"
+      />
+    </p>
+    <div class="section-usability">
+      <h2>Usabilidad</h2>
+      <app-best-practices [practices]="bestPractices"></app-best-practices>
+      <app-bad-practices [practices]="badPractices"></app-bad-practices>
+    </div>
+  </article>
+</section>

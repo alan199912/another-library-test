@@ -1,0 +1,11 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a [routerLink]="['/']">Inicio</a></li>
+    <li class="breadcrumb-item" *ngFor="let route of routes; index as i">
+      <a *ngIf="i !== routes.length - 1; else nameDefault" [routerLink]="[route.url]">
+        {{ route.name }}
+      </a>
+      <ng-template #nameDefault>{{ route?.name }}</ng-template>
+    </li>
+  </ol>
+</nav>

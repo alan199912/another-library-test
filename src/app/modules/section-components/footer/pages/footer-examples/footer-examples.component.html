@@ -1,0 +1,57 @@
+<section class="section-example">
+  <app-viewer title="Footer básico">
+    <o-footer component></o-footer>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html" code="<o-footer></o-footer>"></code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Footer con enlaces" [isNavCode]="true">
+    <o-footer component [linksList]="linksList"></o-footer>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ exampleLinksHTML }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ exampleLinksTS }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Footer con redes sociales" [isNavCode]="true">
+    <o-footer component [networksList]="networksList"></o-footer>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ exampleNetworksHTML }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ exampleNetworksTS }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Footer con telefonos" [isNavCode]="true">
+    <o-footer component [phonesList]="phonesList"></o-footer>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ examplePhonesHTML }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ examplePhonesTS }}</code>
+    </pre>
+  </app-viewer>
+
+  <app-viewer title="Footer completo" [isNavCode]="true">
+    <o-footer component [linksList]="linksList" [networksList]="networksList" [phonesList]="phonesList"></o-footer>
+    <pre appClipboard component-html class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="html">{{ exampleAllHTML }}</code>
+    </pre>
+    <pre appClipboard component-ts class="code">
+      <button class="btn btn-clipboard">Copiar</button>
+      <code appPrism language="javascript">{{ exampleAllTS }}</code>
+    </pre>
+  </app-viewer>
+</section>

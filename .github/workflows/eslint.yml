@@ -1,0 +1,24 @@
+name: eslint-action
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  eslint:
+    name: runner / eslint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Eslint code
+        run: npm run style:lint
