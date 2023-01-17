@@ -6,7 +6,7 @@ import { Colors } from '@alan199912/library-test/core/models';
   standalone: true
 })
 export class OAlertDirective implements OnInit {
-  @Input() public color: Colors = 'danger';
+  @Input() public color: Colors = 'primary';
 
   constructor(private readonly element: ElementRef, private readonly renderer: Renderer2) {}
 
